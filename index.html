@@ -1,0 +1,99 @@
+<html>
+<head>
+	<title>Slap Eric</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="game.css">
+
+
+	
+</head>
+<body>
+
+	<header class="container-fluid text-center bg-secondary text-light">
+		
+		<div class="row">
+			<div class="col-12">
+				<h3>Slap it!</h3>
+			</div>
+		</div>
+		
+		
+
+
+	</header>
+
+
+
+	<main class = "container text-center my-5">
+
+		<div class="row">
+			<div class="col-6 m-auto">
+				<img src="target.png"></img>
+			</div>
+		</div>
+
+		<div class="row mt-2">
+			<div class="col-6 m-auto">
+				<h1><span id="name"></span></h1>
+				<p>HP: <span id="health"></span></p>
+				<p>Hits: <span id="hits"></span></p>
+			</div>
+		</div>
+
+
+
+
+
+
+		<div id = "items" class="row mt-2">
+			<div class="col-3 m-auto card py-2">
+				<h4>Hamburger</h4>
+				<p class="text-left">Damage: +1.25</p>
+				<small class="text-left">"floppy and raw but it will do damage"</small>
+				<button class="btn btn-dark my-2" onclick="giveBorger()">ADD</button>
+			</div>
+			<div class="col-3 m-auto card py-2">
+				<h4>Lightsaber</h4>
+				<p class="text-left">Damage: +2</p>
+				<small class="text-left">"the weapon of a jedi knight"</small>
+				<button class="btn btn-dark my-2" onclick="giveSaber()"">ADD</button>
+			</div>
+			<div class="col-3 m-auto card py-2">
+				<h4>Pants of Saggg</h4>
+				<p class="text-left">Damage: -0.5 </p>
+				<small class="text-left">"bad for damage, but +5 swag"</small>
+				<button class="btn btn-dark my-2" onclick = "pullPantsDown()">ADD</button>
+			</div>
+		</div>
+
+	</main>
+
+
+
+
+	<footer class="container-fluid text-center bg-secondary py-3">
+		<div class="row">
+			<div class="col-3 m-auto">
+				<button id="slap" class="btn btn-danger btn-lg" onclick="slap()">S C H L A P</button>
+			</div>
+			<div class="col-3 m-auto">
+				<button id="punch" class="btn btn-warning btn-lg" onclick="punch()">P U N C H</button>
+			</div>
+
+			<div class="col-3 m-auto">
+				<button id="kick" class="btn btn-info btn-lg" onclick="kick()">K I C K</button>
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-2 m-auto  pt-2">
+				<small class ="pointer text-light" onclick="reset()">reset</small>
+			</div>
+		</div>
+
+	</footer>
+	
+	<script src="game.js"></script>
+</body>
+</html>

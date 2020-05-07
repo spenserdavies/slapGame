@@ -1,0 +1,27 @@
+/*Only use this file if you want to override bootstrap or create your own style*/
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+  }
+  main{
+    margin-top: 25px;
+    flex-grow: 1;
+  
+  }
+  footer{
+    min-height: 10vh;
+  }
+
+
+
+
+
+
+.pointer{
+    cursor: pointer;
+}
+
+.text-left{
+    text-align: left;
+}
