@@ -31,11 +31,11 @@ function addMods(){
 
     target.inventory.forEach(item => {
         mod += item.modifier;
-        return mod;
     })
+    return mod;
 }
 
-addMods()
+
 
 
 
@@ -53,10 +53,11 @@ function pullPantsDown(){
 
 
 function slap() {
+    let damage = 1
 
     if (target.health > 0) {
         target.hits++;
-        target.health -= (1 + addMods());
+        target.health -= damage + addMods();
         console.log("You slapped Eric");
         console.log("HP: " + target.health);
         // lowers HP by 1 on slap, increments hit count
@@ -71,10 +72,11 @@ function slap() {
 }
 
 function punch() {
+    let damage = 5;
 
     if (target.health-5 >= 0) {
         target.hits++;
-        target.health -= (5 + addMods());
+        target.health -= damage + addMods();
         console.log("You punched Eric");
         console.log("HP: " + target.health);
         // lowers HP by 5 on punch, increments hit count
@@ -89,10 +91,11 @@ function punch() {
 }
 
 function kick() {
+    let damage=10;
 
     if (target.health-10 >= 0) {
         target.hits++;
-        target.health -= (10 + addMods()) ;
+        target.health -= damage + addMods() ;
         console.log("You kicked Eric");
         console.log("HP: " + target.health);
         // lowers HP by 10 on kick, increments hit count
